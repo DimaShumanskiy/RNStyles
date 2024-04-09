@@ -1,5 +1,4 @@
-import { Dimensions, PixelRatio ,ImageStyle ,TextStyle, ViewStyle} from 'react-native';
-import EStyleSheet from 'react-native-extended-stylesheet';
+import { Dimensions, PixelRatio ,ImageStyle ,TextStyle, ViewStyle, StyleSheet} from 'react-native';
 
 interface ConfigDTO {
   designWidth: number;
@@ -141,10 +140,8 @@ class RNStyles {
   }
 
   create<T extends NamedStyles<T> | NamedStyles<any>>( styles: T | NamedStyles<T>): T {
-    return EStyleSheet.create(this.__modify(styles)) as T;
+    return StyleSheet.create(this.__modify(styles)) as T;
   }
 }
 
 export default new RNStyles();
-
-EStyleSheet.build();
