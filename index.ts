@@ -12,8 +12,8 @@ type NamedStyles<T> = {[P in keyof T]: ViewStyle | TextStyle | ImageStyle};
 
 
 const CONFIG: ConfigDTO = {
-  designWidth: 428,
-  designHeight: 926,
+  designWidth: 375,
+  designHeight: 812,
   minimalFactor: 1
 };
 
